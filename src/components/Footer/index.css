@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+.footerBg{
+    background-color:#1E2833;
+    padding: 50px;
+}
+.footerImage{
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 25px;
+}
+.emailSentSection input:focus{
+    box-shadow: none !important;
+    border: 0px;
+}
+
+.emailSentBtn{
+    /* padding: 18px; */
+    padding: 18px 22px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #FFD2DD;
+    border: 0px;
+}
+
+.emailSentBtn img{
+    width: 6px;
+    height: 10px;
+}
+.quickLinks{
+    list-style-type: none;
+    margin-top: 46px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.quickLinks li{
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.quickLinks li:first-child{
+    color: #FFD2DD
+}
+.copyright p{
+    margin-right: 15px;
+    font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 20px;
+/* identical to box height */
+
+letter-spacing: -0.204545px;
+}
+.socialIcons a{
+    color:white !important;
+    margin-right: 20px;
+}
