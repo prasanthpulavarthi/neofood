@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.popularHeading{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 70px;
+    letter-spacing: 0.2px;
+}
+
+.popularDescription{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #737B7D;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+@media screen and (max-width: 575px) {
+    .grid-container {
+        grid-template-columns: auto;
+        row-gap: 30px;
+        justify-content: center;
+      }
+}
+
+@media (min-width: 576px) and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+        row-gap: 30px;
+        column-gap: 30px;
+
+      }
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.gridCards{
+    width: 100%;
+    max-width: 312px;
+    height: 497px;
+}
+
+@media screen and (max-width: 575px) {
+    .gridCards{
+        width: 100%;
+        max-width: 312px;
+        height: 380px;
+    }
+}
+
+.gridCards:hover{
+    cursor: pointer;
+}
+
+.gridCards:hover img{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.card{
+    height: 100%;
+}
+
+.card-image-container{
+    overflow: hidden;
+}
+
+.card-title{
+    color: #383C3E;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+}
+
+.card-text{
+    font-family: 'Poppins', sans-serif;
+    color: #737B7D;
+    font-size: 18px;
+}
+
+.addBtn{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.itemQuantityText{
+    font-size: 16px;
+}

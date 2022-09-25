@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+.submitBtn{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #008F17 !important;
+    padding: 16px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+}
+
+.contactUsHeading{
+    font-family: 'Inter', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+@media (max-width: 575px){
+    .contactUsHeading{
+        font-size: 24px;
+    }
+}
+
+.contactUsDescription{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    max-width: 642px;
+    color: #737B7D;
+}
+
+@media (max-width: 575px){
+    .contactUsDescription{
+        font-size: 12px;
+    }
+}
+
+/* .addressContainer{
+    width: 80%;
+    margin-left: auto;
+} */
+
+@media (min-width: 992px){
+    .addressContainer{
+        width: 80%;
+        margin-left: auto;
+    }
+}
+
+.addressContainer .headText{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.addressContainer .addressItem{
+    margin-bottom: 18px;
+}
+
+.addressContainer .addressItem p{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #383C3E;
+}
+
+.formStyleControl{
+    margin-bottom: 40px;
+}
+.formSizeControl{
+    width: 90%;
+}
+
+.formSizeControl input:focus{
+    box-shadow: none !important;
+    border: 0px; 
+}
+
+.formSizeControl .addressInput1{
+    margin-right: 0px;
+}
+
+.formSizeControl .addressInput2{
+    margin-top: 40px;
+}
+
+@media (min-width: 992px){
+
+    .formSizeControl .addressInput1{
+        margin-right: 24px;
+    }
+
+    .formSizeControl .addressInput2{
+        margin-top: 0px;
+        width: 40%;
+    }
+}
+
+.mapContainer{
+    width: 100%;
+    max-width: 400px;
+    max-height: 360px;
+    overflow: hidden;
+}
+
+.mapContainer img{
+    width: 100%;
+}

@@ -21,7 +21,7 @@ const Footer=()=>{
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col  md={2} xl={3}>
             <p>Subscribe to our news letter</p>
                 <form>
                   <div className="d-flex emailSentSection">
@@ -37,7 +37,7 @@ const Footer=()=>{
                   </div>
                 </form>
             </Col>
-            <Col>
+            <Col md={2} xl={3}>
               <ul className="quickLinks text-white">
                 <li>Services</li>
                 <li>Email Marketing</li>
@@ -46,7 +46,7 @@ const Footer=()=>{
                 <li>Offline</li>
               </ul>
             </Col>
-            <Col>
+            <Col md={2} xl={3}>
               <ul className="quickLinks text-white">
                 <li>About</li>
                 <li>Our Story</li>
@@ -55,7 +55,7 @@ const Footer=()=>{
                 <li>Careers</li>
               </ul>
             </Col>
-            <Col>
+            <Col md={2} xl={3}>
               <ul className="quickLinks text-white">
                 <li>Help</li>
                 <li>FAQs</li>

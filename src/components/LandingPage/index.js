@@ -1,8 +1,8 @@
 import React from 'react'
 import "./index.css"
 import { Container, Row, Col } from "react-bootstrap";
-
-
+import PopularItems from '../PopularItems';
+import ContactUs from '../ContactUS';
 const LandingPage=()=> {
   return (
     <>
@@ -71,6 +71,9 @@ const LandingPage=()=> {
         </Row>
     </Container>
     </section>
+    <PopularItems/>
+    <ContactUs/>
+    
     </>
   )
 }
