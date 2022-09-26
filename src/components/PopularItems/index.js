@@ -12,6 +12,7 @@ const PopularItems = () => {
 
   const getPopular = async () => {
     const check = localStorage.getItem("popular");
+    console.log(check)
 
     if (check) {
       setPopular(JSON.parse(check));
@@ -20,6 +21,7 @@ const PopularItems = () => {
         `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=12`
       );
       const data = await api.json();
+      console.log(data)
 
       localStorage.setItem("popular", JSON.stringify(data.recipes));
       setPopular(data.recipes);

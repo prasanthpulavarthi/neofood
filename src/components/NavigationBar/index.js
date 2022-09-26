@@ -1,5 +1,7 @@
 import React from 'react'
 import { Badge } from 'react-bootstrap';
+import {  useEffect } from "react";
+
 // import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -8,9 +10,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { AiOutlineSearch, } from "react-icons/ai";
 import {  BsCartFill} from "react-icons/bs";
+import { useSelector, useDispatch } from "react-redux";
+import { getTotals } from "../../features/addToCart/cartSlice";
+
+
 import "./index.css"
 
 export default function NavbarComponents() {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+  const orderQuantity = useSelector((state) => state.cart.cartTotalQuantity);
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cart]);
+
+
   return (
     <>
     {/* {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => ( */}
@@ -53,7 +67,7 @@ export default function NavbarComponents() {
                   <BsCartFill size={22} />
                   <sup>
                     <Badge  bg="danger" className="rounded-circle">
-                      0
+                    {orderQuantity}
                     </Badge>
                   </sup>
 

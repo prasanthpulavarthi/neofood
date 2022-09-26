@@ -3,6 +3,8 @@ import "./index.css"
 import { Container, Row, Col } from "react-bootstrap";
 import PopularItems from '../PopularItems';
 import ContactUs from '../ContactUS';
+import TrendingFood from '../TrendingFood';
+// import Validaton from '../Validation';
 const LandingPage=()=> {
   return (
     <>
@@ -71,8 +73,11 @@ const LandingPage=()=> {
         </Row>
     </Container>
     </section>
+    <TrendingFood/>
+
     <PopularItems/>
     <ContactUs/>
+    {/* <Validaton/> */}
     
     </>
   )
