@@ -6,8 +6,8 @@ import "./index.css";
 const ContactUs = () => {
   return (
     <>
-      <Container fluid>
-        <Row>
+      <Container fluid >
+        <Row mt-5>
           <Col xs={12}>
             <h2 className="contactUsHeading">Contact Us</h2>
             <p className="contactUsDescription">
