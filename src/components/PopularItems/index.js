@@ -55,6 +55,8 @@ const PopularItems = () => {
   return (
     <>
       <Container fluid>
+    <div style={{height:"50px"}}></div>
+
         <Row  className="mt-5 mb-5">
           <Col xs={12}>
             <h2 className="popularHeading">Popular Items</h2>

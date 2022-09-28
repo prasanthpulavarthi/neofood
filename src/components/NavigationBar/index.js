@@ -1,6 +1,8 @@
 import React from 'react'
 import { Badge } from 'react-bootstrap';
 import {  useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 // import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -18,11 +20,16 @@ import "./index.css"
 
 export default function NavbarComponents() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+
   const cart = useSelector((state) => state.cart);
   const orderQuantity = useSelector((state) => state.cart.cartTotalQuantity);
   useEffect(() => {
     dispatch(getTotals());
   }, [cart]);
+  const navigateToCart = () => {
+    navigate('/cart');
+  };
 
 
   return (
@@ -50,7 +57,7 @@ export default function NavbarComponents() {
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/menu">Menu</Nav.Link>
                   <Nav.Link href="/contact">Contact</Nav.Link>
-                  <Nav.Link href="#action4">Shop</Nav.Link>
+                  <Nav.Link href="/cart">Cart</Nav.Link>
 
                 </Nav>
                 <Form className="d-flex">
@@ -64,7 +71,7 @@ export default function NavbarComponents() {
                     className="me-2 border-0 bg-transparent"
                     aria-label="Search"
                   />
-                  <BsCartFill size={22} />
+                  <BsCartFill size={22} onClick={navigateToCart} style={{cursor:"pointer"}}/>
                   <sup>
                     <Badge  bg="danger" className="rounded-circle">
                     {orderQuantity}

@@ -1,0 +1,25 @@
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 80px 400px 180px 200px 180px auto;
+    /* grid-template-columns: auto auto auto auto auto auto; */
+    padding: 10px;
+  }
+  .grid-item1 {
+    /* padding: 20px; */
+    /* font-size: 30px; */
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+
+.addBtn{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.itemQuantityText{
+    font-size: 16px;
+}

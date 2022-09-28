@@ -9,7 +9,10 @@ const LandingPage=()=> {
   return (
     <>
     <section  className="banner">
+
     <Container>
+    <div style={{height:"100px"}}></div>
+
         <Row>
             <Col xl={5} className="d-flex flex-column justify-content-center">
             <div className="mb-3">

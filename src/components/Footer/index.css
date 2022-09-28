@@ -38,6 +38,9 @@
     padding-bottom: 20px;
     cursor: pointer;
 }
+.quickLinks li:hover{
+    color:#FFD2DD
+}
 
 .quickLinks li:first-child{
     color: #FFD2DD
@@ -56,4 +59,5 @@ letter-spacing: -0.204545px;
 .socialIcons a{
     color:white !important;
     margin-right: 20px;
+    
 }

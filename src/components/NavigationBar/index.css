@@ -20,6 +20,9 @@
     font-size: 22px;
     color: #000000;
 }
+.nav-link:hover{
+    color:darkorange
+}
 .searchBox{
     padding-left:35px;
     width: 100%;

@@ -1,5 +1,6 @@
 .errorMsg{
     color:red;
+    padding-left:10px;
 }
 .successMsg{
     color:green;

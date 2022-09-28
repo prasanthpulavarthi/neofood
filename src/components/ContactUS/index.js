@@ -7,6 +7,8 @@ const ContactUs = () => {
   return (
     <>
       <Container fluid >
+    <div style={{height:"100px"}}></div>
+
         <Row mt-5>
           <Col xs={12}>
             <h2 className="contactUsHeading">Contact Us</h2>

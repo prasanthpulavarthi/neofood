@@ -1,6 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationBar from './components/NavigationBar';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import LandingPage from './components/LandingPage';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
@@ -10,6 +12,7 @@ function App() {
   return (
     <>
      <Router>
+      <ToastContainer/>
         <NavigationBar />
 
         <Routes>

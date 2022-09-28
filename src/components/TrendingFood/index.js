@@ -31,20 +31,6 @@ const TrendingFood = () => {
     
   };
 
-  // const orderQuantity = useSelector((state) => state.cart.numOfOrders);
-
-  // const itemsInCart = useSelector((state)=>state.cart.cartItems[0].cartQuantity)
-  // const itemsInCart = useSelector((state) => state.cart.cartItems);
-
-  // useEffect(() => {
-  //   itemsInCart.forEach((item) => {
-  //     if (item.id === foodItem[0].id) {
-  //       setIndCartItem(item.cartQuantity);
-  //     } else {
-  //       setIndCartItem(0);
-  //     }
-  //   });
-  // },[]);
 
   useEffect(() => {
     randomTrendingFood();

@@ -16,7 +16,7 @@ const cartSlice = createSlice({
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
       );
-      if (itemIndex >= 0) {
+      if (itemIndex >= 0){
         state.cartItems[itemIndex].cartQuantity += 1;
         toast.success(`product added again`, {
           position: "bottom-left",
