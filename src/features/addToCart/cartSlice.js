@@ -1,6 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
+
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+
+// import { collection, addDoc, getFirestore, setDoc, doc } from "firebase/firestore"; 
+
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCR-cY6YOinFUmq-Hg2boYKlPLhe519KRU",
+//   authDomain: "react-cb60d.firebaseapp.com",
+//   databaseURL: "https://react-cb60d-default-rtdb.firebaseio.com",
+//   projectId: "react-cb60d",
+//   storageBucket: "react-cb60d.appspot.com",
+//   messagingSenderId: "217170280099",
+//   appId: "1:217170280099:web:164caca3041eef397a0916"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+
+// // Initialize Cloud Firestore and get a reference to the service
+// const db = getFirestore(app);
+
 const initialState = {
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
@@ -29,6 +55,7 @@ const cartSlice = createSlice({
         });
       }
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      updateUserCartFirebase(state.cartItems);
     },
 
     removeItem: (state, action) => {
@@ -48,11 +75,13 @@ const cartSlice = createSlice({
             (cartItem) => cartItem.id !== action.payload.id
           );
           state.cartItems = nextCartItems;
-          localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
           toast.error(`!add atleast one product`, {
             position: "bottom-left",
           });
         }
+
+        localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
+        updateUserCartFirebase(state.cartItems);
       }
     },
 
@@ -62,6 +91,7 @@ const cartSlice = createSlice({
         position: "bottom-left",
       });
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
+      updateUserCartFirebase(state.cartItems)
     },
 
     getTotals(state, action) {
@@ -82,9 +112,24 @@ const cartSlice = createSlice({
       );
       state.cartTotalQuantity = quantity;
       state.cartTotalAmount = total.toFixed(2);
-    },
+    }
   },
 });
+
+async function updateUserCartFirebase(cartData) {
+
+//   try {
+//     // const docRef = await addDoc(collection(db, "userCart"), {cartItems: cartData});
+//     const user = localStorage.getItem('userData') && JSON.parse((localStorage.getItem('userData') ) );
+// console.log(user);
+//     const docRef = await setDoc(doc(db, "userCart", user.email), {cartItems: cartData}, {merge: true});
+//     console.log("Document written with ID: ", docRef);
+//   } catch (e) {
+//     console.error("Error adding document: ", e);
+//   }
+  
+
+}
 
 export default cartSlice.reducer;
 export const { addItem, removeItem,clearCart, getTotals } = cartSlice.actions;

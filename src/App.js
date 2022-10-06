@@ -11,9 +11,15 @@ import PopularItems from './components/PopularItems';
 import Search from './components/Search';
 import Login from './components/Login';
 import { useSelector } from 'react-redux';
-function App() {
 
+function App() {
+  
   const authState = useSelector((state) => state.auth);
+  // function PrivateRoute({children}){
+  
+  //   return authState && authState.isLoggedIn ?children :<Navigate to="/" />;
+  // }
+
 
   return (
     <>
@@ -25,7 +31,7 @@ function App() {
           {
             authState && authState.isLoggedIn ? (<Route path="/" element={<LandingPage />} />) : (<Route path="/" element={<Login/>}/>)
           }
-          {/* <Route path="/" element={<LandingPage />} /> */}
+          <Route path="/" element={<LandingPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<ContactUs/>}/>
           <Route path="/menu" element={<PopularItems/>}/>

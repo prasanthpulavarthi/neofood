@@ -57,7 +57,8 @@ const Login = () => {
         }
       })
       .then((data) => {
-        dispatch(authActions.login(data.idToken));
+        dispatch(authActions.login(data));
+
         navigate("/");
       })
       .catch((err) => {
@@ -66,7 +67,11 @@ const Login = () => {
   };
 
   return (
+    <>
+    <div style={{height:"50px"}}></div>
+
     <section className={classes.auth}>
+
       <h1>{isLogin ? "Login" : "Sign Up"}</h1>
       <form onSubmit={submitHandler}>
         <div className={classes.control}>
@@ -97,6 +102,8 @@ const Login = () => {
         </div>
       </form>
     </section>
+    </>
+
   );
 };
 

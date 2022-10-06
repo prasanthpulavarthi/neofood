@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Badge } from "react-bootstrap";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // import Button from 'react-bootstrap/Button';
 import Container from "react-bootstrap/Container";
@@ -63,11 +63,11 @@ export default function NavbarComponents() {
               <Nav className="justify-content-center flex-grow-1 pe-3">
                 {authState && authState.isLoggedIn ? (
                   <>
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/menu">Menu</Nav.Link>
-                    <Nav.Link href="/contact">Contact</Nav.Link>
-                    <Nav.Link href="/cart">Cart</Nav.Link>
-                    <Nav.Link href="/" onClick={logoutHandler}>
+                    <Nav.Link as={Link} to="/">Home</Nav.Link>
+                    <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
+                    <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+                    <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
+                    <Nav.Link as={Link} to="/" onClick={logoutHandler}>
                       Logout
                     </Nav.Link>
                   </>
@@ -75,32 +75,36 @@ export default function NavbarComponents() {
                   <Nav.Link href="/login">Login</Nav.Link>
                 )}
               </Nav>
-              <Form className="d-flex" onSubmit={searchItems}>
-                {/* <img src='./images/Vector.png' alt="search icon"/> */}
-                <div className="d-flex align-items-center shadow rounded-pill searchBox pe-4">
-                  <AiOutlineSearch size={22} />
+              {authState && authState.isLoggedIn? (
+                 <Form className="d-flex" onSubmit={searchItems}>
+                 {/* <img src='./images/Vector.png' alt="search icon"/> */}
+                 <div className="d-flex align-items-center shadow rounded-pill searchBox pe-4">
+                   <AiOutlineSearch size={22} />
+ 
+                   <Form.Control
+                     type="search"
+                     placeholder="Search"
+                     className="me-2 border-0 bg-transparent"
+                     aria-label="Search"
+                     ref={searchRef}
+                   />
+                   <BsCartFill
+                     size={22}
+                     onClick={navigateToCart}
+                     style={{ cursor: "pointer" }}
+                   />
+                   <sup>
+                     <Badge bg="danger" className="rounded-circle">
+                       {orderQuantity}
+                     </Badge>
+                   </sup>
+                 </div>
+ 
+                 {/* <Button variant="outline-success">Search</Button> */}
+               </Form>
 
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2 border-0 bg-transparent"
-                    aria-label="Search"
-                    ref={searchRef}
-                  />
-                  <BsCartFill
-                    size={22}
-                    onClick={navigateToCart}
-                    style={{ cursor: "pointer" }}
-                  />
-                  <sup>
-                    <Badge bg="danger" className="rounded-circle">
-                      {orderQuantity}
-                    </Badge>
-                  </sup>
-                </div>
-
-                {/* <Button variant="outline-success">Search</Button> */}
-              </Form>
+              ):(" ")}
+             
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
