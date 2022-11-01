@@ -44,7 +44,7 @@ export default function NavbarComponents() {
     <>
       {/* {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => ( */}
       <Navbar bg="light" expand="lg" fixed="top">
-        <Container fluid>
+        <Container fluid className="navbar-alignment">
           <img src="./images/NavLogo.png" alt="Logo" className="navLogo" />
 
           <Navbar.Brand href="#">NEOFood</Navbar.Brand>
@@ -72,7 +72,12 @@ export default function NavbarComponents() {
                     </Nav.Link>
                   </>
                 ) : (
-                  <Nav.Link href="/login">Login</Nav.Link>
+                  <>
+                  <Nav.Link href="/login" className="login-alignment">Login</Nav.Link>
+                  {/* <Nav.Link href="/">signUp</Nav.Link> */}
+
+                  </>
+                  
                 )}
               </Nav>
               {authState && authState.isLoggedIn? (
