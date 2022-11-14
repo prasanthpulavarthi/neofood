@@ -7,7 +7,7 @@ import { BsTwitter} from 'react-icons/bs';
 const Footer=()=>{
     return(
         <>
-        <div className="footerBg">
+        <div className="footerBg" >
         <Container>
           <Row>
             <Col xs={12}>

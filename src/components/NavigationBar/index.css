@@ -42,7 +42,13 @@ padding-top:0px;
     background-color: #000000;
     left:70%;
 }
+.navbar-alignment{
+    justify-content: center;
+}
 .login-alignment{
-    padding-right:130px!important;
+    font-weight: normal;
+    justify-content: end;
+
 
 }
+

@@ -60,7 +60,7 @@ export default function NavbarComponents() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-center flex-grow-1 pe-3">
+              {authState && authState.isLoggedIn?(<Nav className="navbar-alignment flex-grow-1 pe-3">
                 {authState && authState.isLoggedIn ? (
                   <>
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
@@ -72,14 +72,25 @@ export default function NavbarComponents() {
                     </Nav.Link>
                   </>
                 ) : (
+                  ""
+                  
+                )}
+              </Nav>):( <Nav className="login-alignment flex-grow-1 pe-3">
+                {authState && authState.isLoggedIn ? (
+                 ""
+                
+                ) : (
                   <>
-                  <Nav.Link href="/login" className="login-alignment">Login</Nav.Link>
+                  <Nav.Link href="/login" className="login-alignment align-self-end">Login</Nav.Link>
                   {/* <Nav.Link href="/">signUp</Nav.Link> */}
 
                   </>
                   
                 )}
-              </Nav>
+              </Nav>)}
+              
+              
+             
               {authState && authState.isLoggedIn? (
                  <Form className="d-flex" onSubmit={searchItems}>
                  {/* <img src='./images/Vector.png' alt="search icon"/> */}

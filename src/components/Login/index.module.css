@@ -8,7 +8,7 @@
     
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     padding: 1rem;
-    text-align: center;
+    /* text-align: center; */
     color:white;
   }
   
@@ -29,11 +29,11 @@
   }
   
   .control label {
-    display: block;
+    /* display: block; */
     /* color: white; */
     color:#1E2833;
 
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 0.5rem;
   }
   
@@ -78,7 +78,9 @@
   /* background: linear-gradient(#F4ECE1 100%, #FCFBF7 100%); */
 
     /* border-color: #873abb; */
-    background-color:rgba(255, 126, 0, 1);
+    border-color:rgba(255, 126, 0, 1);
+    color:rgba(255, 126, 0, 1);
+
     ;    ;
   }
   
@@ -87,13 +89,14 @@
     background-color: transparent;
     /* color: #9f5ccc; */
     border: none;
-    color:rgba(0, 0, 0, 1);
 
     padding: 0.15rem 1.5rem;
+    color:rgba(255, 126, 0, 1);
   }
   
   .actions .toggle:hover {
     background-color: transparent;
-    color:rgba(255, 126, 0, 1);
+    color:rgba(0, 0, 0, 1);
+    
 
   }
